@@ -77,7 +77,7 @@ docker-build: ## build docker image
 
 ########################################################
 build:  ## build dbpack cli, and put in dist dir
-	GOOS="linux"  GOARCH="amd64" CGO_ENABLED=0 go build -o dbpack ./cmd
+	GOOS=$(GOOS)  GOARCH=$(GOARCH) CGO_ENABLED=0 go build -o dbpack ./cmd
 
 ########################################################
 integration-test:
